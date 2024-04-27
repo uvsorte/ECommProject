@@ -1,26 +1,22 @@
 package com.Microservices.EComProductService.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
-public class Product {
-    private int id;
+public class Product extends BaseModel {
     private String title;
     private double price;
     private String description;
-    private String category;
+    @ManyToOne
+    private Category category;
     private String imageURL;
     private double rating;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;
@@ -50,7 +46,7 @@ public class Product {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 

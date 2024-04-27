@@ -1,28 +1,19 @@
 package com.Microservices.EComProductService.dto;
 
-
-import com.Microservices.EComProductService.entity.Category;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.UUID;
+
 @Getter
 @Setter
-public class ProductResponseDTO {
-    private int productId;
+public class CreateProductRequestDTO {
     private String title;
     private double price;
     private String description;
-    private String category;
     private String imageURL;
-    private double rating;
+    private UUID categoryId;
 
-    public int getProductId() {
-        return productId;
-    }
-
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
 
     public String getTitle() {
         return title;
@@ -48,13 +39,6 @@ public class ProductResponseDTO {
         this.description = description;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
 
     public String getImageURL() {
         return imageURL;
@@ -64,11 +48,12 @@ public class ProductResponseDTO {
         this.imageURL = imageURL;
     }
 
-    public double getRating() {
-        return rating;
+
+    public UUID getCategoryId() {
+        return categoryId;
     }
 
-    public void setRating(double rating) {
-        this.rating = rating;
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
     }
 }

@@ -1,8 +1,7 @@
 package com.Microservices.EComProductService.client;
 
-import com.Microservices.EComProductService.dto.FakeStoreCartResponseDTO;
-import com.Microservices.EComProductService.dto.FakeStoreProductResponseDTO;
-import com.Microservices.EComProductService.entity.Product;
+import com.Microservices.EComProductService.dto.FakeStoreDTOs.FakeStoreCartResponseDTO;
+import com.Microservices.EComProductService.dto.FakeStoreDTOs.FakeStoreProductResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;

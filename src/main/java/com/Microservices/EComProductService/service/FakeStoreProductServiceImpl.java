@@ -1,7 +1,7 @@
 package com.Microservices.EComProductService.service;
 
 import com.Microservices.EComProductService.client.FakeStoreClient;
-import com.Microservices.EComProductService.dto.FakeStoreProductResponseDTO;
+import com.Microservices.EComProductService.dto.FakeStoreDTOs.FakeStoreProductResponseDTO;
 import com.Microservices.EComProductService.entity.Product;
 import com.Microservices.EComProductService.exception.NoProductPresentException;
 import com.Microservices.EComProductService.exception.ProductNotFoundException;
@@ -11,13 +11,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FakeStoreProductServiceImpl implements ProductService{
+public class FakeStoreProductServiceImpl{
 
     @Autowired
       private FakeStoreClient fakeStoreClient;
 
 
-    @Override
+
     public List<FakeStoreProductResponseDTO> getAllProduct() {
         List<FakeStoreProductResponseDTO> fakeStoreProducts = fakeStoreClient.getAllProducts();
         if(fakeStoreProducts == null){
@@ -29,7 +29,7 @@ public class FakeStoreProductServiceImpl implements ProductService{
 
 
 
-    @Override
+
     public FakeStoreProductResponseDTO getProduct(int productId) {
         FakeStoreProductResponseDTO fakeStoreProductResponseDTO = fakeStoreClient.getProductById(productId);
         if(fakeStoreProductResponseDTO == null){
@@ -38,17 +38,17 @@ public class FakeStoreProductServiceImpl implements ProductService{
         return fakeStoreProductResponseDTO;
     }
 
-    @Override
+
     public Product createProduct(Product product) {
         return null;
     }
 
-    @Override
+
     public Product updateProduct(Product updateProduct, int productId) {
         return null;
     }
 
-    @Override
+
     public boolean deleteproduct(int productId) {
         return false;
     }

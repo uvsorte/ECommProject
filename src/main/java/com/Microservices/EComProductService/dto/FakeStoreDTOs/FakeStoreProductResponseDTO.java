@@ -1,5 +1,6 @@
-package com.Microservices.EComProductService.dto;
+package com.Microservices.EComProductService.dto.FakeStoreDTOs;
 
+import com.Microservices.EComProductService.dto.FakeStoreDTOs.FakeStoreProductRatingDTO;
 import lombok.Getter;
 import lombok.Setter;
 
